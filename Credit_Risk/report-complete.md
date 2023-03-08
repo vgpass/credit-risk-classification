@@ -9,7 +9,7 @@ The purpose of this analysis is to build a prediction model that will be able to
 * Borrower's income 
 * Debt_to_Income ratio
 * The number of of accounts that the borrower uses regularly
-* derogatory marks on the borrower's credit report
+* Derogatory marks on the borrower's credit report
 * The borrower's total debt
 
 A final column called *loan status* is provided that indicates whether the borrower defaulted on the loan. A 1 indicates that the borrower defaulted, a '0' indicates a healthy loan.
