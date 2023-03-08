@@ -14,7 +14,7 @@ The purpose of this analysis is to build a prediction model that will be able to
 
 A final column called *loan status* is provided that indicates whether the borrower defaulted on the loan. A 1 indicates that the borrower defaulted, a '0' indicates a healthy loan.
 
-In the dataset there are 2500 loans out of the 77,536 that are in default. This was determined by getting the value counts of the *loan status* column. These loan defaults make up 3.22% of the bank's loans for the information provided in the dataset. Total loans made amounted to $760,284,100. Of this total, the 2,500 loans in default amounted to $46,269,501 or 6.09% of the assets on loan. Obviously, this amount is disproportionate to the number of loans in default, and the bank owes a fiduciary duty to it's stockholders to limit this amount to any degree possible.
+In the dataset, there are 2,500 loans out of the 77,536 that are in default. This was determined by getting the value counts of the *loan status* column. These loan defaults make up 3.22% of the bank's loans for the information provided in the dataset. Total loans made amounted to $760,284,100. Of this total, the 2,500 loans in default amounted to $46,269,501 or 6.09% of the assets on loan. Obviously, this amount is disproportionate to the number of loans in default, and the bank owes a fiduciary duty to it's stockholders to limit this amount to any degree possible.
 
 The data was first split to remove the *loan status* column and save it as a separate data frame to be used as labels. The data features were then split into training data and testing data. This was done using a default 75/25 split. The training data was then fit to a Logistic Regregression model. Scoring the model resulted in a training score of *Training Data Score* of **0.99212** and a *Testing Data Score* of **0.99184**. The model was then used to predict the test data and indicators were generated for balanced accuracy score, confusion matrix, and a classification report.
 
@@ -63,11 +63,12 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
             accuracy                            0.99     19384
             macro avg       0.92      0.99      0.95     19384
             weighted avg    0.99      0.99      0.99     19384
-            
+
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Only one prediction model was used in this exercise. In this case, it was Logistic Regression. Additional testing was done with that model using Random Oversampling. Both tests result in a highly accurate fit of 99%. In the case of the random sampling data, only 4 false negatives were produced. A higher number of false positives were produced; however, if the prediction model is used soley as a first step in addressing the potential default of a loan, it could be used by the bank to provide those borrowers with a team of dedicated specialists who could further investigate the situation. Additional resources could be allocated to keeping those risky loans from going into default. Even keeping 10% of the loans from going into default could amount to a savings of almost five million dollars for the dataset examined.
 
-If you do not recommend any of the models, please justify your reasoning.
+The high accuracy of the model for predicting healthy loans would allow bankers to move resources from where they are not needed to where they will bring the most savings. Because the prediction of healthy loans is highly accurate, bankers could focus on all the loans in question. These would include true negatives, false negatives, and false positives. Because the model is not as accurate in these cases, it would be important to use other measures to assess the health of those loans and not just rely on the model alone. 
+
+
+
