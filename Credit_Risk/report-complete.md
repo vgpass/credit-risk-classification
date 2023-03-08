@@ -2,14 +2,6 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
-
 The purpose of this analysis is to build a prediction model that will be able to analyze credit worthiness of borrowers for the bank and flag potential loan defaults. The dataset provided by the bank contains 77,536 entries with seven key indicators. These are listed as follows:
 
 * Size of the loan
@@ -34,13 +26,44 @@ The testing data was then subjected to random oversampling of the loan default s
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+  * Balanced Accuracy Score 0.9520479254722232
 
+  *     Confusion Matrix results
+            True positive:  18663   
+            False positive: 102
+            True negative:  563
+            False negative: 56
+
+  *                      precision   recall  f1-score   support
+
+           0                1.00      0.99      1.00     18765
+           1                0.85      0.91      0.88       619
+
+            accuracy                            0.99     19384
+            macro avg       0.92      0.95      0.94     19384
+            weighted avg    0.99      0.99      0.99     19384
 
 
 * Machine Learning Model 2:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
 
+      * Balanced Accuracy Score 0.9936781215845847
+
+  *     Confusion Matrix results
+            True positive:  18649  
+            False positive: 116
+            True negative:  615
+            False negative: 4
+
+  *                      precision   recall  f1-score   support
+
+           0                1.00      0.99      1.00     18765
+           1                0.84      0.99      0.91       619
+
+            accuracy                            0.99     19384
+            macro avg       0.92      0.99      0.95     19384
+            weighted avg    0.99      0.99      0.99     19384
+            
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
