@@ -45,9 +45,8 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 
 * Machine Learning Model 2, Logistic Regression using Random Oversampling:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
 
-      * Balanced Accuracy Score 0.9936781215845847
+  * Balanced Accuracy Score 0.9936781215845847
 
   *     Confusion Matrix results
             True positive:  18649  
