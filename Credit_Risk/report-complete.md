@@ -12,7 +12,7 @@ The purpose of this analysis is to build a prediction model that will be able to
 * Derogatory marks on the borrower's credit report
 * The borrower's total debt
 
-A final column called *loan status* is provided that indicates whether the borrower defaulted on the loan. A 1 indicates that the borrower defaulted, a '0' indicates a healthy loan.
+A final column called *loan status* is provided that indicates whether the borrower defaulted on the loan. A `1` indicates that the borrower defaulted, a `0` indicates a healthy loan.
 
 In the dataset, there are 2,500 loans out of the 77,536 that are in default. This was determined by getting the value counts of the *loan status* column. These loan defaults make up 3.22% of the bank's loans for the information provided in the dataset. Total loans made amounted to $760,284,100. Of this total, the 2,500 loans in default amounted to $46,269,501 or 6.09% of the assets on loan. Obviously, this amount is disproportionate to the number of loans in default, and the bank owes a fiduciary duty to it's stockholders to limit this amount to any degree possible.
 
