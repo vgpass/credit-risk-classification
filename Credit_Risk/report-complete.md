@@ -16,7 +16,7 @@ A final column called *loan status* is provided that indicates whether the borro
 
 In the dataset, there are 2,500 loans out of the 77,536 that are in default. This was determined by getting the value counts of the *loan status* column. These loan defaults make up 3.22% of the bank's loans for the information provided in the dataset. Total loans made amounted to $760,284,100. Of this total, the 2,500 loans in default amounted to $46,269,501 or 6.09% of the assets on loan. Obviously, this amount is disproportionate to the number of loans in default, and the bank owes a fiduciary duty to it's stockholders to limit this amount to any degree possible.
 
-The data was first split to remove the *loan status* column and save it as a separate data frame to be used as labels. The data features were then split into training data and testing data. This was done using a default 75/25 split. The training data was then fit to a Logistic Regregression model. Scoring the model resulted in a training score of *Training Data Score* of **0.99212** and a *Testing Data Score* of **0.99184**. The model was then used to predict the test data and indicators were generated for balanced accuracy score, confusion matrix, and a classification report.
+The data was first split to remove the *loan status* column and save it as a separate data frame to be used as labels. The data features were then split into training data and testing data. This was done using a default 75/25 split. The training data was then fit to a Logistic Regression model. Scoring the model resulted in a training score of *Training Data Score* of **0.99212** and a *Testing Data Score* of **0.99184**. The model was then used to predict the test data and indicators were generated for balanced accuracy score, confusion matrix, and a classification report.
 
 The testing data was then subjected to random oversampling of the loan default status. The purpose of this is to over-represent the default loans in the dataset in order to better test the models predictive power. The resulting random data was composed of equal data points of 75,036 for both healthy loans(**0**) and default loans (**1**). A new model was fit using Logistic Regression for the resampled data, and then this data was used to predict the original test data. Once again, a balanced accuracy score, confusion matrix, and classification report were generated from the results.
 
@@ -25,7 +25,7 @@ The testing data was then subjected to random oversampling of the loan default s
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
+* Machine Learning Model 1, Logistic Regression:
   * Balanced Accuracy Score 0.9520479254722232
 
   *     Confusion Matrix results
@@ -44,7 +44,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
             weighted avg    0.99      0.99      0.99     19384
 
 
-* Machine Learning Model 2:
+* Machine Learning Model 2, Logistic Regression using Random Oversampling:
   * Description of Model 2 Accuracy, Precision, and Recall scores.
 
       * Balanced Accuracy Score 0.9936781215845847
