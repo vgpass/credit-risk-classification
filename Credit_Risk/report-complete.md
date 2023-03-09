@@ -20,19 +20,23 @@ The data was first split to remove the *loan status* column and save it as a sep
 
 The testing data was then subjected to random oversampling of the loan default status. The purpose of this is to over-represent the default loans in the dataset in order to better test the models predictive power. The resulting random data was composed of equal data points of 75,036 for both healthy loans(**0**) and default loans (**1**). A new model was fit using Logistic Regression for the resampled data, and then this data was used to predict the original test data. Once again, a balanced accuracy score, confusion matrix, and classification report were generated from the results.
 
+A second analysis was then conducted with the feature data scaled using the StandardScaler function. The prediction model using the scaled data shows an even better result than using raw data. The balanced accuracy score went up by .370. Precision dropped one percent, but recall went up by seven percent. In the confusion matrix, false positives dropped from 56 to 10 for the data set, but false negatives went up by 11. True positives dropped slightly by 11 as well. However, predicting the model with re-sampled scaled data gave a different picture.
+
+For the oversampled scaled data, the model was extremely accurate at 99%, but shows little improvement over using raw data. The numbers are virtually the same. False negatives went up from to 125 from 116. For this reason, it may be better to stick with the raw data when making predictions.
+
 
 ## Results
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1, Logistic Regression:
+* Machine Learning Model **1**, Logistic Regression **using raw data**:
   * Balanced Accuracy Score 0.9520479254722232
 
   *     Confusion Matrix results
             True positive:  18663   
-            False positive: 102
+            False positive: 56
             True negative:  563
-            False negative: 56
+            False negative: 102
 
   *                      precision   recall  f1-score   support
 
@@ -44,20 +48,58 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
             weighted avg    0.99      0.99      0.99     19384
 
 
-* Machine Learning Model 2, Logistic Regression using Random Oversampling:
+* Machine Learning Model **2**, Logistic Regression **using raw data and Random Oversampling**:
 
   * Balanced Accuracy Score 0.9936781215845847
 
   *     Confusion Matrix results
             True positive:  18649  
-            False positive: 116
+            False positive: 4
             True negative:  615
-            False negative: 4
+            False negative: 116
 
   *                      precision   recall  f1-score   support
 
            0                1.00      0.99      1.00     18765
            1                0.84      0.99      0.91       619
+
+            accuracy                            0.99     19384
+            macro avg       0.92      0.99      0.95     19384
+            weighted avg    0.99      0.99      0.99     19384
+
+* Machine Learning Model **3**, Logistic Regression **using scaled data and Random Oversampling**:
+
+  * Balanced Accuracy Score 0.9889115309798473
+
+  *     Confusion Matrix results
+            True positive:  18652  
+            False positive: 10
+            True negative:  609
+            False negative: 113
+
+  *                      precision   recall  f1-score   support
+
+           0                1.00      0.99      1.00     18765
+           1                0.84      0.98      0.91       619
+
+            accuracy                            0.99     19384
+            macro avg       0.92      0.99      0.95     19384
+            weighted avg    0.99      0.99      0.99     19384
+
+* Machine Learning Model **4**, Logistic Regression **using scaled data and Random Oversampling**:
+
+  * Balanced Accuracy Score 0.9934383134311076
+
+  *     Confusion Matrix results
+            True positive:  18640  
+            False positive: 4
+            True negative:  615
+            False negative: 125
+
+  *                      precision   recall  f1-score   support
+
+           0                1.00      0.99      1.00     18765
+           1                0.83      0.99      0.91       619
 
             accuracy                            0.99     19384
             macro avg       0.92      0.99      0.95     19384
