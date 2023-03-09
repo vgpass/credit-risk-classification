@@ -20,7 +20,6 @@ The purpose of this challenge was to build a prediction model that would be able
 * The borrower's total debt
 
 A final column called *loan status* was provided that indicated a healthy loan with a `0` and a loan in default with a `1`.
-
 <br/><br/>
 
 # **Files**
